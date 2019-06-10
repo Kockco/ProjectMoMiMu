@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     ConstantForce2D constForce;
     public FixedJoint2D joint;
     Vector2 startPos;
-    float h, v;
+    public float h, v;
 
     //오디오
     public AudioSource jump;
@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     //GetKey(키관련)
     bool DownKey;
-    bool JumpKeyDown;
+    public bool JumpKeyDown;
     bool JumpKeyUp;
     bool JumpCancelKey;
     bool StickKeyDown;
@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         constForce = GetComponent<ConstantForce2D>();
         ani = transform.GetChild(0).GetComponent<Animator>();
-        
+
         eState = CH_STATE.Stand;
 
         forceTime = 0;
@@ -208,7 +208,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 velocity = rb.velocity;
         velocity.y += gravity * gravitySpeed * Time.fixedDeltaTime;
         rb.velocity = velocity;
-
     }
 
     //공중에서 회전하는부분

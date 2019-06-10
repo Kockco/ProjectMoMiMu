@@ -2581,6 +2581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joint: {fileID: 0}
+  h: 0
+  v: 0
   jump: {fileID: 0}
   Move: {fileID: 0}
   playerNumber: 2
@@ -2609,6 +2611,7 @@ MonoBehaviour:
   max_throw_torque_value: 0
   collisionFalseTime: 0
   eState: 0
+  JumpKeyDown: 0
   DownCollider: {fileID: 1038905712}
 --- !u!4 &633031113
 Transform:
@@ -5055,6 +5058,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.1}
   serializedVersion: 2
   m_Radius: 0.18
+--- !u!1 &701504563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100006, guid: 72ddbf1790057f845a37437220c459a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1526146665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &701504564 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 72ddbf1790057f845a37437220c459a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1526146665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &701504565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701504563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba633a88f65266c41a214bf412bb90b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnim: {fileID: 701504564}
 --- !u!1 &719788108
 GameObject:
   m_ObjectHideFlags: 0
@@ -5233,6 +5261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joint: {fileID: 0}
+  h: 0
+  v: 0
   jump: {fileID: 0}
   Move: {fileID: 0}
   playerNumber: 1
@@ -5261,6 +5291,7 @@ MonoBehaviour:
   max_throw_torque_value: 0
   collisionFalseTime: 0
   eState: 0
+  JumpKeyDown: 0
   DownCollider: {fileID: 1252716021}
 --- !u!4 &719788114
 Transform:

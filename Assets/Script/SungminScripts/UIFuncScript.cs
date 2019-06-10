@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIFuncScript : MonoBehaviour
@@ -13,18 +14,20 @@ public class UIFuncScript : MonoBehaviour
     [SerializeField]
     private Animation[] uiAnime;
 
-    void OnHint()
+    public void OnHint()
     {
 
     }
 
-    void OnReStart()
+    public void OnReStart()
     {
         SceneManager.LoadScene(3);
     }
-    
-    void OnOffPause()
+
+    public void OnOffPause()
     {
+        Debug.Log("OnOffPause");
+
         pauseState = !pauseState;
 
         if (pauseState)
@@ -39,13 +42,15 @@ public class UIFuncScript : MonoBehaviour
         }
     }
 
-    void BackScene()
+    public void BackScene()
     {
         SceneManager.LoadScene(2);
     }
 
-    void GameClearAnime()
+    public void GameClearAnime()
     {
+        Debug.Log("OnOffPause");
+
         for (int i = 0; i < uiAnime.Length; i++)
             uiAnime[i].Play();
     }
